@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'javascript/script.js' %}"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <aside class="sidebar">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar chat..." aria-label="Buscar chat">
+            </div>
+            <nav class="chat-list">
+                <div class="chat-item active">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Avatar de Chat General" class="chat-item-avatar">
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Chat General</div>
+                        <div class="chat-item-last-message">Último mensaje...</div>
+                    </div>
+                    <div class="online-indicator"></div>
+                </div>
+                <div class="chat-item">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Avatar de Proyecto A" class="chat-item-avatar">
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Proyecto A</div>
+                        <div class="chat-item-last-message">Último mensaje...</div>
+                    </div>
+                </div>
+                <div class="chat-item">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Avatar de Soporte Técnico" class="chat-item-avatar">
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Soporte Técnico</div>
+                        <div class="chat-item-last-message">Último mensaje...</div>
+                    </div>
+                    <div class="online-indicator"></div>
+                </div>
+                <div class="chat-item">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Avatar de Equipo de Diseño" class="chat-item-avatar">
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Equipo de Diseño</div>
+                        <div class="chat-item-last-message">Último mensaje...</div>
+                    </div>
+                </div>
+                <div class="chat-item">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Avatar de Recursos Humanos" class="chat-item-avatar">
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Recursos Humanos</div>
+                        <div class="chat-item-last-message">Último mensaje...</div>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+        <main class="main-chat">
+            <button class="back-button" aria-label="Volver a la lista de chats">&larr;</button>
+            <header class="chat-header">
+                <div class="chat-header-info">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Avatar de Chat General" class="chat-header-avatar">
+                    <span>Chat General</span>
+                </div>
+                <div class="online-indicator"></div>
+            </header>
+            <section class="chat-messages" id="contenedor">
+
+                <div id="escribiendo" class="typing-indicator">Elena está escribiendo...</div>
+            </section>
+            <footer class="chat-input">
+                <button class="multimedia-button" aria-label="Insertar multimedia">+</button>
+                <div class="multimedia-options">
+                    <div class="multimedia-option" data-type="image">Imagen</div>
+                    <div class="multimedia-option" data-type="video">Video</div>
+                    <div class="multimedia-option" data-type="audio">Audio</div>
+                    <div class="multimedia-option" data-type="document">Documento</div>
+                </div>
+                <input id="entrada" type="text" placeholder="Escribe un mensaje..." aria-label="Escribe un mensaje">
+                <button id="boton" type="button">Enviar</button>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
